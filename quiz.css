@@ -1,0 +1,115 @@
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #343a40;
+        color: white;
+        padding: 10px 0;
+    }
+
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #ffc107;
+    }
+
+    .navmenu .dropdown ul {
+        display: none;
+        list-style: none;
+        background-color: #343a40;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        min-width: 180px;
+        padding: 5px 0;
+    }
+
+    .navmenu .dropdown:hover ul {
+        display: block;
+    }
+
+    /* Quiz Section */
+    .quiz-section {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 600px;
+        margin: 50px auto;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    .form-check {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        /* Set buttons to fill the container width */
+        margin-bottom: 10px;
+        /* Add space between buttons */
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #6c757d;
+        /* Grey color for default state */
+        color: white;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Button hover effect */
+    button:hover {
+        background-color: #5a6268;
+        /* Darker grey when hovered */
+        transform: scale(1.05);
+        /* Slightly enlarge the button */
+    }
+
+    /* Correct answer styles */
+    .correct-answer {
+        background-color: #28a745 !important;
+        /* Green color for correct answer */
+        color: white !important;
+    }
+
+    /* Incorrect answer styles */
+    .incorrect-answer {
+        background-color: #dc3545 !important;
+        /* Red color for incorrect answer */
+        color: white !important;
+    }
+
+    #timer {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #result {
+        font-size: 20px;
+        font-weight: bold;
+    }
