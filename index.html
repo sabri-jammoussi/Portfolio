@@ -1,120 +1,599 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Accueil</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Sabri Jammoussi — Développeur Full-Stack | Vue.js · ASP.NET Core · Flutter</title>
+  <meta name="description" content="Portfolio de Sabri Jammoussi, développeur full-stack basé à Sfax (Tunisie). 2 ans d'expérience en Vue.js 3, ASP.NET Core et Flutter — applications web & mobiles performantes, sécurisées et testées.">
+  <meta name="keywords" content="Sabri Jammoussi, développeur full-stack, Vue.js, ASP.NET Core, Flutter, .NET 9, Sfax, Tunisie, développeur web, développeur mobile, CQRS, Cypress">
+  <meta name="author" content="Sabri Jammoussi">
+  <meta name="theme-color" content="#08090d">
+  <link rel="canonical" href="https://portfolio-sandy-eta-98.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sabri Jammoussi — Développeur Full-Stack">
+  <meta property="og:description" content="Développeur full-stack — Vue.js 3, ASP.NET Core & Flutter. Applications web & mobiles performantes.">
+  <meta property="og:url" content="https://portfolio-sandy-eta-98.vercel.app/">
+  <meta property="og:image" content="https://portfolio-sandy-eta-98.vercel.app/assets/img/linkdin.png">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sabri Jammoussi — Développeur Full-Stack">
+  <meta name="twitter:description" content="Développeur full-stack — Vue.js 3, ASP.NET Core & Flutter.">
+  <meta name="twitter:image" content="https://portfolio-sandy-eta-98.vercel.app/assets/img/linkdin.png">
+
+  <!-- Icons & Fonts -->
+  <link rel="icon" href="assets/img/linkdin.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sabri Jammoussi",
+    "jobTitle": "Développeur Full-Stack",
+    "email": "mailto:sabrijm123@gmail.com",
+    "telephone": "+21623734344",
+    "address": { "@type": "PostalAddress", "addressLocality": "Sfax", "addressCountry": "TN" },
+    "url": "https://portfolio-sandy-eta-98.vercel.app/",
+    "sameAs": [
+      "https://github.com/sabriJammoussi",
+      "https://github.com/sabri-jammoussi",
+      "https://www.linkedin.com/in/jammoussi-sabri-488005286/"
+    ],
+    "knowsAbout": ["Vue.js", "ASP.NET Core", "Flutter", "C#", ".NET", "SQL Server", "CQRS"]
+  }
+  </script>
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <!-- Preloader -->
+  <div id="preloader"><div class="loader-ring" aria-hidden="true"></div></div>
 
-      <a href="index.html" class="logo d-flex align-items-center">
+  <!-- Background FX -->
+  <div class="fx" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  </div>
+  <div class="fx-grid" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div id="progress" aria-hidden="true"></div>
 
-        <h1 class="sitename"> Portfolio</h1>
-      </a>
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="container">
+      <a href="#hero" class="brand"><span class="dot"></span>Sabri<span class="gradient-text">.J</span></a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="./about.html">A propos</a></li>
-          <li><a href="./service.html">Compétences</a></li>
-          <!-- <li><a href="./portfolio.html">Témoignage IIT</a></li> -->
-          <!--  <li><a href="./quiz.html">Quiz</a></li> --> 
-          <li class="dropdown"><a href="#"><span>Etude</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="./parcourAcademique.html"> parcours académique</a></li>
-              <li class="dropdown"><a href="#"><span>Évènements & Passions</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="./passion.html">Passion</a></li>
-                  <li><a href="./journeFormation.html">journées de formation</a></li>
-
-                </ul>
-              </li>
-              <li><a href="./matiere.html">matières étudiées</a></li>
-              <li><a href="./stage.html">Stages</a></li>
-
-            </ul>
-          </li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#hero" class="active">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#experience">Expérience</a>
+        <a href="#projects">Projets</a>
+        <a href="#education">Formation</a>
+        <a href="#contact">Contact</a>
       </nav>
 
+      <div class="nav-actions">
+        <button id="theme-btn" class="icon-btn" aria-label="Changer de thème"><i class="bi bi-sun"></i></button>
+        <a href="assets/cv/CV-Sabri-Jammoussi.pdf" class="btn btn-primary nav-desktop-only" download><i class="bi bi-download"></i>CV</a>
+        <button class="icon-btn nav-toggle" aria-label="Ouvrir le menu"><i class="bi bi-list"></i></button>
+      </div>
     </div>
   </header>
 
-  <main class="main">
+  <!-- Mobile menu -->
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <button class="mobile-close" aria-label="Fermer le menu"><i class="bi bi-x-lg"></i></button>
+    <a href="#hero">Accueil</a>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#experience">Expérience</a>
+    <a href="#projects">Projets</a>
+    <a href="#education">Formation</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/cv/CV-Sabri-Jammoussi.pdf" class="btn btn-primary" download><i class="bi bi-download"></i>Télécharger le CV</a>
+  </div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+  <main>
 
-      <img src="assets/img/27230.jpg" alt="" data-aos="fade-in" style="height: 1050px;">
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <span class="hero-badge" data-reveal><span class="pulse"></span>Disponible pour de nouvelles opportunités</span>
+          <h1 data-reveal data-reveal-delay="1">Bonjour, je suis<br><span class="gradient-text">Sabri Jammoussi</span></h1>
+          <div class="role" data-reveal data-reveal-delay="2">
+            <span class="typed" data-words="Développeur Full-Stack|Développeur Vue.js & .NET|Développeur Flutter|Ingénieur en informatique"></span><span class="cursor">|</span>
+          </div>
+          <p class="lede" data-reveal data-reveal-delay="3">
+            Je conçois et livre des applications web et mobiles performantes — de la conception d'API
+            et la modélisation de bases de données jusqu'aux interfaces réactives, aux tests E2E et au
+            déploiement mobile. Orienté qualité du code, sécurité applicative et impact mesurable.
+          </p>
+          <div class="hero-cta" data-reveal data-reveal-delay="4">
+            <a href="#contact" class="btn btn-primary"><i class="bi bi-send"></i>Me contacter</a>
+            <a href="#projects" class="btn btn-ghost"><i class="bi bi-collection"></i>Voir mes projets</a>
+          </div>
+          <div class="hero-social" data-reveal data-reveal-delay="5">
+            <a href="https://github.com/sabriJammoussi" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/jammoussi-sabri-488005286/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/sabri_jammoussi/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/sabri.jammoussi.9/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
 
-      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
-        data-aos-delay="100">
-        <h2>Je suis Sabri Jammoussi</h2>
-        <p class="biographie">
-          un développeur web passionné par la création de solutions innovantes. Avec une années
-          d'expérience dans le développement front-end et back-end, j'ai travaillé sur divers projets utilisant des
-          technologies comme Vue.js, ASP.NET et SQL Server. Je suis également un amateur de sport, notamment de padel,
-          et j'apprécie les moments passés en forêt lors de mes escapades en camping.
-        </p>
-        <div class="footer accent-background">
-          <div class="container">
-            <div class="social-links d-flex justify-content-center">
+        <div class="hero-visual" data-reveal data-reveal-delay="2">
+          <div class="avatar-wrap">
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <img class="avatar" src="assets/img/linkdin.png" alt="Portrait de Sabri Jammoussi" width="360" height="360">
+            <span class="chip c1"><i class="bi bi-window-stack"></i>Vue.js 3</span>
+            <span class="chip c2"><i class="bi bi-braces"></i>ASP.NET Core</span>
+            <span class="chip c3"><i class="bi bi-phone"></i>Flutter</span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Défiler vers le bas">
+        <span class="mouse" aria-hidden="true"></span>Défiler
+      </a>
+    </section>
 
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">À propos</span>
+          <h2>Un développeur orienté <span class="gradient-text">qualité & impact</span></h2>
+        </div>
 
-              <a href="https://github.com/sabri-jammoussi" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="https://www.facebook.com/sabri.jammoussi.9/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-facebook"></i>
-              </a>
+        <div class="about-grid">
+          <div class="about-card" data-reveal>
+            <p>
+              Développeur full-stack avec 2 ans d'expérience, spécialisé en <strong>Vue.js&nbsp;3</strong> et
+              <strong>ASP.NET Core</strong>. J'interviens sur l'ensemble du cycle de développement : conception
+              d'API RESTful en architecture CQRS, modélisation de bases de données SQL Server, création
+              d'interfaces réactives avec PrimeVue, tests E2E automatisés et déploiement d'applications mobiles Flutter.
+            </p>
+            <p>
+              Actuellement chez <strong>APBS Groupe</strong> à Sfax, je contribue à la plateforme RH xHR et à
+              son application mobile, tout en renforçant la sécurité applicative et l'automatisation des flux de données.
+            </p>
+            <div class="info-list">
+              <div><div class="k">Nom</div><div class="v">Jammoussi Sabri</div></div>
+              <div><div class="k">Profil</div><div class="v">Full-Stack Developer</div></div>
+              <div><div class="k">Localisation</div><div class="v">Sfax, Tunisie</div></div>
+              <div><div class="k">Diplôme</div><div class="v">Ingénieur (en cours)</div></div>
+              <div><div class="k">Email</div><div class="v">sabrijm123@gmail.com</div></div>
+              <div><div class="k">Téléphone</div><div class="v">+216 23 734 344</div></div>
+            </div>
+          </div>
 
-              <a href="https://www.instagram.com/sabri_jammoussi/?hl=fr" target="_blank"><i
-                  class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/jammoussi-sabri-488005286/" target="_blank"><i
-                  class="bi bi-linkedin"></i></a>
+          <div class="stats" data-reveal data-reveal-delay="1">
+            <div class="stat"><div class="num gradient-text" data-count="2">0</div><div class="label">Ans d'expérience</div></div>
+            <div class="stat"><div class="num gradient-text" data-count="10" data-suffix="+">0</div><div class="label">Modules frontend</div></div>
+            <div class="stat"><div class="num gradient-text" data-count="50" data-suffix="+">0</div><div class="label">Tests E2E écrits</div></div>
+            <div class="stat"><div class="num gradient-text" data-count="20" data-suffix="+">0</div><div class="label">Endpoints API</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Compétences</span>
+          <h2>Ma <span class="gradient-text">stack technique</span></h2>
+          <p>Les technologies que j'utilise au quotidien pour livrer des produits robustes et maintenables.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-cat" data-reveal>
+            <div class="cat-icon"><i class="bi bi-window-stack"></i></div>
+            <h3>Frontend</h3>
+            <div class="tags"><span class="tag">Vue.js 3</span><span class="tag">Nuxt.js</span><span class="tag">PrimeVue</span><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+          </div>
+          <div class="skill-cat" data-reveal data-reveal-delay="1">
+            <div class="cat-icon"><i class="bi bi-braces-asterisk"></i></div>
+            <h3>Backend</h3>
+            <div class="tags"><span class="tag">ASP.NET Core</span><span class="tag">C#</span><span class="tag">.NET 9</span><span class="tag">EF Core</span><span class="tag">REST API</span><span class="tag">CQRS</span></div>
+          </div>
+          <div class="skill-cat" data-reveal data-reveal-delay="2">
+            <div class="cat-icon"><i class="bi bi-phone"></i></div>
+            <h3>Mobile</h3>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">iOS</span><span class="tag">Android</span></div>
+          </div>
+          <div class="skill-cat" data-reveal data-reveal-delay="3">
+            <div class="cat-icon"><i class="bi bi-database"></i></div>
+            <h3>Bases de données</h3>
+            <div class="tags"><span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">SSMS</span></div>
+          </div>
+          <div class="skill-cat" data-reveal>
+            <div class="cat-icon"><i class="bi bi-bug"></i></div>
+            <h3>Tests & Qualité</h3>
+            <div class="tags"><span class="tag">Cypress (E2E)</span><span class="tag">Revue de code</span><span class="tag">CI/CD</span></div>
+          </div>
+          <div class="skill-cat" data-reveal data-reveal-delay="1">
+            <div class="cat-icon"><i class="bi bi-shield-lock"></i></div>
+            <h3>Sécurité</h3>
+            <div class="tags"><span class="tag">Autorisation</span><span class="tag">CORS</span><span class="tag">Chiffrement</span><span class="tag">Gestion de tokens</span></div>
+          </div>
+          <div class="skill-cat" data-reveal data-reveal-delay="2">
+            <div class="cat-icon"><i class="bi bi-tools"></i></div>
+            <h3>Outils</h3>
+            <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker Compose</span><span class="tag">Swagger</span><span class="tag">Postman</span><span class="tag">Metabase</span></div>
+          </div>
+          <div class="skill-cat" data-reveal data-reveal-delay="3">
+            <div class="cat-icon"><i class="bi bi-diagram-3"></i></div>
+            <h3>Méthodes</h3>
+            <div class="tags"><span class="tag">Agile / Scrum</span><span class="tag">Node.js</span><span class="tag">Webhooks</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Parcours professionnel</span>
+          <h2>Mon <span class="gradient-text">expérience</span></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item" data-reveal>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-meta"><span class="tl-date">Août 2024 — Présent</span></div>
+              <h3>Développeur Full-Stack</h3>
+              <div class="tl-org">APBS Groupe · Sfax, Tunisie</div>
+              <ul>
+                <li>Architecture et lancement de l'application mobile <strong>xHR (Flutter)</strong> iOS/Android — 3 modules RH : absences, planning, bulletins de paie.</li>
+                <li>Mise en place du framework de tests <strong>E2E Cypress</strong> sur BHub (50+ tests), portant la couverture des flux API à 80 %.</li>
+                <li>Intégration de webhooks et automatisation des flux inter-applications, réduisant la saisie manuelle de 60 %.</li>
+                <li>Renforcement de la sécurité (autorisation, CORS, chiffrement, whitelist/blacklist de tokens) — exposition aux vulnérabilités réduite de 40 %.</li>
+                <li>Plus de 10 modules frontend <strong>Vue.js 3 + PrimeVue</strong> et API RESTful <strong>ASP.NET Core 9 / EF Core / CQRS</strong> (20+ endpoints).</li>
+                <li>Animation des cérémonies Agile/Scrum et 100+ revues de code via pull requests GitHub.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-meta"><span class="tl-date">Août 2025</span></div>
+              <h3>Stagiaire — Stage d'Initiation IIT</h3>
+              <div class="tl-org">APBS Groupe · Sfax, Tunisie</div>
+              <ul>
+                <li>Module de gestion des soldes de congés (xHR) : 3 types d'accumulation (aucune, mensuelle, annuelle) avec règles d'intégrité.</li>
+                <li>Import/export Excel avec validation automatisée — temps de traitement manuel réduit de 70 %.</li>
+                <li>Stack : Vue.js + PrimeVue, ASP.NET, SQL Server, Swagger.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-meta"><span class="tl-date">Fév 2024 — Mai 2024</span></div>
+              <h3>Stagiaire — Projet de Fin d'Études</h3>
+              <div class="tl-org">APBS Groupe · Sfax, Tunisie</div>
+              <ul>
+                <li>Application full-stack de gestion des contrats de licences logicielles (500+ enregistrements).</li>
+                <li>Backend <strong>.NET Core 8</strong> (REST), frontend responsive avec Nuxt.js.</li>
+                <li>Modélisation SQL Server et migrations EF Core pour un versionnement fluide.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-meta"><span class="tl-date">Juin 2023 — Juil 2023</span></div>
+              <h3>Stagiaire — Solutions Sage</h3>
+              <div class="tl-org">APBS Groupe · Sfax, Tunisie</div>
+              <ul>
+                <li>Développement de <strong>Caisse_Admin</strong>, application POS avec Vue.js 3 et Vuetify 3 (4 modules CRUD).</li>
+                <li>Flux d'authentification complet (sign-in/sign-up) et contrôle d'accès par rôle.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-meta"><span class="tl-date">Jan 2022 — Fév 2022</span></div>
+              <h3>Stagiaire — Développement C#</h3>
+              <div class="tl-org">ID Software Solutions · Sfax, Tunisie</div>
+              <ul>
+                <li>Programme de formation de 2 mois en développement d'applications C# dans un environnement Agile.</li>
+                <li>Réalisation d'une application desktop de gestion de bibliothèque.</li>
+              </ul>
             </div>
           </div>
         </div>
-        <p><span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
       </div>
+    </section>
 
-    </section><!-- /Hero Section -->
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Réalisations</span>
+          <h2>Projets <span class="gradient-text">sélectionnés</span></h2>
+          <p>Projets professionnels, académiques et personnels — du web au mobile, en full-stack.</p>
+        </div>
 
+        <div class="filters" data-reveal>
+          <button class="active" data-filter="*">Tous</button>
+          <button data-filter="pro">Professionnel</button>
+          <button data-filter="web">Web</button>
+          <button data-filter="mobile">Mobile</button>
+          <button data-filter="fullstack">Full-Stack</button>
+        </div>
 
-    </div><!-- End Portfolio Container -->
+        <div class="projects-grid">
+          <article class="project" data-cat="pro mobile" data-reveal>
+            <div class="project-media logo"><img src="assets/img/flutter.png" alt="Application mobile xHR"></div>
+            <div class="project-body">
+              <h3>Application Mobile xHR</h3>
+              <p>App RH multiplateforme (iOS/Android) couvrant absences, planning et consultation des bulletins de paie.</p>
+              <div class="project-tags"><span>Flutter</span><span>Dart</span><span>REST API</span></div>
+              <div class="project-links"><span><i class="bi bi-briefcase"></i>Projet professionnel</span></div>
+            </div>
+          </article>
 
-    </div>
+          <article class="project" data-cat="mobile" data-reveal data-reveal-delay="1">
+            <div class="project-media"><img src="assets/img/metio.jpg" alt="Application métiers et CV interactif"></div>
+            <div class="project-body">
+              <h3>CV Interactif & Métiers API</h3>
+              <p>Applications Flutter affichant des données métiers en temps réel via API et un CV interactif.</p>
+              <div class="project-tags"><span>Flutter</span><span>API REST</span></div>
+              <div class="project-links"><span><i class="bi bi-mortarboard"></i>Projet académique</span></div>
+            </div>
+          </article>
 
-    </div>
+          <article class="project" data-cat="web fullstack" data-reveal data-reveal-delay="2">
+            <div class="project-media"><img src="assets/img/voiture.png" alt="Gestion de showroom automobile"></div>
+            <div class="project-body">
+              <h3>Showroom Automobile</h3>
+              <p>Plateforme de gestion d'un showroom de voitures : back-end Node.js et front-end Next.js dynamique.</p>
+              <div class="project-tags"><span>Next.js</span><span>Node.js</span></div>
+              <div class="project-links"><span><i class="bi bi-mortarboard"></i>Projet académique</span></div>
+            </div>
+          </article>
 
-    </section><!-- /Portfolio Section -->
+          <article class="project" data-cat="web fullstack" data-reveal>
+            <div class="project-media"><img src="assets/img/angular.png" alt="E-commerce électronique Angular"></div>
+            <div class="project-body">
+              <h3>E-commerce Électronique</h3>
+              <p>Boutique de produits électroniques : gestion utilisateurs et transactions (Node.js), UI réactive (Angular).</p>
+              <div class="project-tags"><span>Angular</span><span>Node.js</span></div>
+              <div class="project-links"><span><i class="bi bi-mortarboard"></i>Projet académique</span></div>
+            </div>
+          </article>
 
+          <article class="project" data-cat="web fullstack" data-reveal data-reveal-delay="1">
+            <div class="project-media grad"><i class="bi bi-bag-heart"></i></div>
+            <div class="project-body">
+              <h3>E-commerce Vêtements</h3>
+              <p>Site e-commerce full-stack avec Django : gestion des utilisateurs, produits et commandes.</p>
+              <div class="project-tags"><span>Django</span><span>Python</span></div>
+              <div class="project-links"><span><i class="bi bi-mortarboard"></i>Projet académique</span></div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="web fullstack" data-reveal data-reveal-delay="2">
+            <div class="project-media grad"><i class="bi bi-shop"></i></div>
+            <div class="project-body">
+              <h3>E-commerce Spring Boot</h3>
+              <p>Application e-commerce : back-end Spring Boot (données, utilisateurs, transactions), front-end Angular.</p>
+              <div class="project-tags"><span>Spring Boot</span><span>Angular</span></div>
+              <div class="project-links"><span><i class="bi bi-mortarboard"></i>Projet académique</span></div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="web" data-reveal>
+            <div class="project-media logo"><img src="assets/img/vue2.png" alt="Caisse Admin POS Vue.js"></div>
+            <div class="project-body">
+              <h3>Caisse Admin (POS)</h3>
+              <p>Application de gestion de caisses tactiles avec Vue.js 3 et Vuetify 3 — 4 modules CRUD & accès par rôle.</p>
+              <div class="project-tags"><span>Vue.js 3</span><span>Vuetify</span></div>
+              <div class="project-links"><a href="https://github.com/sabri-jammoussi/caisse-admin-vue" target="_blank" rel="noopener"><i class="bi bi-github"></i>Code</a></div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="fullstack web" data-reveal data-reveal-delay="1">
+            <div class="project-media logo"><img src="assets/img/aspnet.png" alt="Gestion des licences ASP.NET Core"></div>
+            <div class="project-body">
+              <h3>Gestion des Licences</h3>
+              <p>Application web de gestion des licences clients : ASP.NET Core 8 (back), Vue.js/Nuxt (front), Vuetify.</p>
+              <div class="project-tags"><span>.NET 8</span><span>Vue.js</span><span>SQL Server</span></div>
+              <div class="project-links"><a href="https://github.com/sabri-jammoussi/Licence_webApp" target="_blank" rel="noopener"><i class="bi bi-github"></i>Code</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Formation & distinctions</span>
+          <h2>Mon <span class="gradient-text">parcours académique</span></h2>
+        </div>
+
+        <div class="edu-grid">
+          <div class="edu-card" data-reveal>
+            <div class="thumb logo"><img src="assets/img/IIT-Main-3.png" alt="Institut International de Technologie" style="object-fit:contain;padding:1.5rem;background:#fff"></div>
+            <div class="edu-body">
+              <div class="yr">2024 — 2027</div>
+              <h3>Diplôme d'Ingénieur en Informatique</h3>
+              <div class="school">Institut International de Technologie (IIT), Sfax</div>
+              <p>Cursus d'ingénierie en cours — 2ᵉ année terminée.</p>
+            </div>
+          </div>
+
+          <div class="edu-card" data-reveal data-reveal-delay="1">
+            <div class="thumb"><img src="assets/img/fac.jpg" alt="ISET Sfax"></div>
+            <div class="edu-body">
+              <div class="yr">2021 — 2024</div>
+              <h3>Licence en Technologies d'Informatique</h3>
+              <div class="school">ISET Sfax — Développement des Systèmes d'Information</div>
+              <span class="badge-mention">Mention Très Bien · 18/20</span>
+            </div>
+          </div>
+
+          <div class="edu-card" data-reveal data-reveal-delay="2">
+            <div class="thumb"><img src="assets/img/bac.jpg" alt="Baccalauréat"></div>
+            <div class="edu-body">
+              <div class="yr">2017 — 2021</div>
+              <h3>Baccalauréat Technique</h3>
+              <div class="school">Lycée Abou Kacem Chebbi, Sfax Teniour</div>
+              <p>Diplôme national d'accès à l'enseignement supérieur.</p>
+            </div>
+          </div>
+
+          <div class="edu-card" data-reveal>
+            <div class="thumb"><img src="assets/img/greenLab.jpg" alt="Hackathon GreenLab"></div>
+            <div class="edu-body">
+              <div class="yr">Mai 2023</div>
+              <h3>Hackathon GreenLab</h3>
+              <div class="school">ISET Sfax · Club MTC — 24h</div>
+              <p>Challenge d'innovation en équipe : idéation et prototypage d'une solution durable.</p>
+            </div>
+          </div>
+
+          <div class="edu-card" data-reveal data-reveal-delay="1">
+            <div class="thumb"><img src="assets/img/certifJS.jpg" alt="Certification JavaScript"></div>
+            <div class="edu-body">
+              <div class="yr">Certification</div>
+              <h3>Certification JavaScript</h3>
+              <div class="school">Workshop MTC — ISET Sfax</div>
+              <p>Certification obtenue à l'issue d'un workshop dédié à JavaScript.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PASSIONS ================= -->
+    <section id="passions" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">En dehors du code</span>
+          <h2>Mes <span class="gradient-text">passions</span></h2>
+        </div>
+
+        <div class="passion-grid">
+          <div class="passion" data-reveal>
+            <video src="assets/img/camp.mp4" muted loop playsinline controls preload="metadata" aria-label="Vidéo de camping"></video>
+            <div class="p-info">
+              <h3><i class="bi bi-tree"></i>Camping</h3>
+              <p>Me reconnecter avec la nature loin du tumulte quotidien — le calme des forêts, les nuits étoilées et l'esprit d'aventure.</p>
+            </div>
+          </div>
+          <div class="passion" data-reveal data-reveal-delay="1">
+            <video src="assets/img/paddel.mp4" muted loop playsinline controls preload="metadata" aria-label="Vidéo de padel"></video>
+            <div class="p-info">
+              <h3><i class="bi bi-trophy"></i>Padel</h3>
+              <p>Sport, stratégie et convivialité — chaque point est un défi de coordination, de rapidité et de précision entre partenaires.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Contact</span>
+          <h2>Travaillons <span class="gradient-text">ensemble</span></h2>
+          <p>Une opportunité, un projet ou simplement envie d'échanger ? Écrivez-moi.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-cards" data-reveal>
+            <a class="contact-item" href="https://www.google.com/maps/search/?api=1&query=Sfax,Tunisie" target="_blank" rel="noopener">
+              <span class="ci-icon"><i class="bi bi-geo-alt"></i></span>
+              <span><span class="k">Localisation</span><br><span class="v">Sfax, Tunisie</span></span>
+            </a>
+            <a class="contact-item" href="tel:+21623734344">
+              <span class="ci-icon"><i class="bi bi-telephone"></i></span>
+              <span><span class="k">Téléphone</span><br><span class="v">+216 23 734 344</span></span>
+            </a>
+            <a class="contact-item" href="mailto:sabrijm123@gmail.com">
+              <span class="ci-icon"><i class="bi bi-envelope"></i></span>
+              <span><span class="k">Email</span><br><span class="v">sabrijm123@gmail.com</span></span>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/jammoussi-sabri-488005286/" target="_blank" rel="noopener">
+              <span class="ci-icon"><i class="bi bi-linkedin"></i></span>
+              <span><span class="k">LinkedIn</span><br><span class="v">jammoussi-sabri</span></span>
+            </a>
+          </div>
+
+          <form class="contact-form" data-reveal data-reveal-delay="1" novalidate>
+            <div class="field">
+              <label for="cf-name">Nom</label>
+              <input type="text" id="cf-name" name="name" placeholder="Votre nom" required>
+              <span class="err">Merci d'indiquer votre nom.</span>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" placeholder="vous@exemple.com" required>
+              <span class="err">Merci d'indiquer un email valide.</span>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Sujet</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="Objet de votre message" required>
+              <span class="err">Merci d'indiquer un sujet.</span>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" placeholder="Votre message…" required></textarea>
+              <span class="err">Merci d'écrire un message.</span>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i>Envoyer le message</button>
+            <p class="form-note">Le formulaire ouvrira votre client mail avec le message pré-rempli.</p>
+            <div class="form-success"><i class="bi bi-check-circle"></i>Merci ! Ouverture de votre client mail…</div>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#hero" class="brand"><span class="dot"></span>Sabri<span class="gradient-text">.J</span></a>
+      <div class="foot-social">
+        <a href="https://github.com/sabriJammoussi" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/jammoussi-sabri-488005286/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/sabri_jammoussi/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/sabri.jammoussi.9/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+      <p>© <span id="year">2026</span> Sabri Jammoussi — Conçu & développé avec passion à Sfax.</p>
+    </div>
+  </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <button id="scroll-top" aria-label="Remonter en haut"><i class="bi bi-arrow-up"></i></button>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/app.js" defer></script>
 </body>
 
 </html>
