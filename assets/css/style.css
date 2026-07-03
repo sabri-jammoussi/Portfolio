@@ -9,8 +9,8 @@
    ----------------------------------------------------------------------- */
 :root {
   /* Brand */
-  --accent: #3b82f6;
-  --accent-2: #8b5cf6;
+  --accent: #2563eb;
+  --accent-2: #0ea5e9;
   --accent-3: #06b6d4;
   --gradient: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
 
@@ -26,7 +26,7 @@
   --muted: #838ba1;
   --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.75);
   --shadow-sm: 0 8px 24px -12px rgba(0, 0, 0, 0.6);
-  --glow: rgba(59, 130, 246, 0.35);
+  --glow: rgba(37, 99, 235, 0.35);
 
   /* Type */
   --font-head: "Sora", system-ui, sans-serif;
@@ -55,7 +55,7 @@
   --muted: #666d80;
   --shadow: 0 24px 60px -24px rgba(20, 30, 60, 0.28);
   --shadow-sm: 0 10px 28px -16px rgba(20, 30, 60, 0.22);
-  --glow: rgba(59, 130, 246, 0.22);
+  --glow: rgba(37, 99, 235, 0.22);
 }
 
 /* -----------------------------------------------------------------------
